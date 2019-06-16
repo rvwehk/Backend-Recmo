@@ -42,6 +42,8 @@ app.use(cors(config));
 // Send message for default URL
 app.use('/api/', routes);
 
+app.get('/', (req, res) => res.send('RecMo server start...'))
+
 // Connecting to the database
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true
